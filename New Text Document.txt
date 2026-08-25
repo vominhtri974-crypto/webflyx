@@ -1,0 +1,25 @@
+1 Commit bao gồm: 
+tree <hashkey>: Trỏ tới snapshot của files structure
+author <name> <mail> <time>: người đã that sự viết code
+committer <name> <mail> <time>: người bấm commit
+parent <hashkey>: trỏ về commit ngay trước (trừ root commit (1st commit))
+merge  commit -> 2 dòng parent
+gpgsig(chữ ký điện tử)
+
+commit -> tree (file structures) -> blob (binary large objects) hoặc là tree con
+
+lệnh lấy tất cả các commit: git log ( git log --graph --all)
+lệnh lấy hash commit gần nhất: git rev-parse --short HEAD
+lệnh xem log đầy đủ: git log --oneline --graph --decorate --parents
+
+lệnh xem file qua hashkey: git cat-file -p <hashkey>(cần 6 ký tự đầu)
+
+đổi tên branch: git branch -m <old> <new>
+
+git switch -c <tên>: tạo branch mới và nhảy tới đó (head là vị trí hiện tại của branch)
+
+Merge: 3 bước
+B1: đổi về nhánh muốn nhận dữ lieu: git switch
+B2: git status
+B3: git merge <tên nhánh> sau đó nhập message
+
